@@ -1,0 +1,120 @@
+---
+title: "Lab 2 Instructions"
+author: "Harold Nelson"
+date: "July 28, 2017"
+output: word_document
+---
+
+This lab is an analysis of weather in Olympia, Washington. It uses daily data from July 1, 1877 to the middle of July 2017.  
+
+## Problem 1
+The first step is to load the data. The load command in the following chunk works on my computer, but you will have to modify it.  Of course before you can do this you need to download the data from the course onto your computer. After that, you can bring it into RStudio with the following steps.
+
+1. Click on "File"
+2. Click on "Open File"
+3. Navigate to the file and double-click it.
+4. Say yes.
+5. Copy the command that this process placed in your console.
+6. Paste this on top of the command from my system. Leave this command in your first chunk so that it runs everytime you knit.
+
+Run the command str() on your file to verify that your import was successful.
+
+```{r}
+
+# The load command below must be run every time you run knitr.
+
+load("~/Dropbox/RProjects/Oly Weather/olywthr.rdata")
+
+str(olywthr)
+```
+
+
+
+Be careful to keep the R code you need within chunks. Always include the R code and output needed to answer the questions.
+
+
+
+## Problem 2
+Run a summary of the dataframe to look for anomalies. Do all of the minimum and maximum values make sense? Are there any NA values?  
+
+```{r}
+# Place your R code here.
+
+```
+
+## Problem  3
+Provide the basic descriptive statistics, a histogram and a boxplot for maximum daily temperature (TMAX). You can use summary() but you need to add the interquartile range and the standard deviation. Is this distribution symmetric? Which of these is the better measure of variation for this variable? Make two additional correct statements about TMAX.
+
+```{r}
+
+# Place the R code you need to answer this question in this chunk.
+
+```
+
+
+
+
+
+
+## Problem 4
+Create a smaller dataframe (juloct) containing only observations from the months of July and October Use tapply() with summary() to compare the TMAX values from these two months.  Produce a side-by-side boxplot.  Make two correct statements to describe your results.
+
+```{r}
+# Place your R code here.
+
+```
+
+## Problem 5
+Create a new boolean variable QRain in the dataframe juloct.  If PRCP is greater than 0, the variable should be set to TRUE. Otherwise it should be set to FALSE. Produce a table and a barplot of QRain.
+
+
+```{r}
+
+# Place the R code you need to answer this question in this chunk.
+
+```
+
+
+
+## Problem 6
+Produce a table and a mosaicplot to describe the relationship between the variables QRain and mo in the dataframe juloct. Describe what you see.
+
+```{r}
+
+# Place the R code you need to answer this question in this chunk.
+
+```
+
+
+
+
+## Problem 7
+Create an even smaller dataframe (recent) which contains only data from 2010 and later, but uses all days of the year. 
+* Produce a scatterplot to describe the relationship between TMAX and TMIN using the data in jorecent.
+* Compute the correlation coefficient.
+* Describe the meaning of the the correlation coefficient.  Does it agree with the visual results in the plot?
+
+```{r}
+
+# Place the R code you need to answer this question in this chunk.
+
+```
+
+
+
+## Problem 8
+Produce a linear model using the dataframe recent which could be used to predict the value of TMIN from a given value of TMAX.  
+
+* Display the summary results of the linear model.
+* Use the results of the model to predict the value of TMIN if the value of TMAX is 106. Show the R code you used to make this prediction.
+
+
+```{r}
+
+# Place the R code you need to answer this question in this chunk.
+
+```
+
+
+
+
