@@ -112,7 +112,7 @@ Produce a linear model using the dataframe recent which could be used to predict
 ```{r}
 
 # Place the R code you need to answer this question in this chunk.
-
+# A bit of code
 ```
 
 
